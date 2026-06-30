@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.elf-order-form {
+    max-width: 600px;
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.elf-order-form h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.elf-order-form .subtitle {
+    font-size: 15px;
+    color: #4a4a4a;
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 700;
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #333;
+    outline: none;
+    background-color: #fff;
+    margin-bottom: 16px;
+}
+
+.input-field::placeholder {
+    color: #a3a3a3;
+}
+
+.input-field:focus {
+    border-color: #000000;
+}
+
+select.input-field {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+input[type="date"].input-field {
+    color: #a3a3a3;
+}
+
+input[type="date"].input-field:focus, 
+input[type="date"].input-field:valid {
+    color: #333;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .input-field {
+    flex: 1;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"],
+.terms-container input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #000000;
+    cursor: pointer;
+}
+
+.terms-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: #000000;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn {
+    background-color: #0f1115;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #23272f;
+}
+
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+}
