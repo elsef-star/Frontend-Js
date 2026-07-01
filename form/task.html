@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Simple Order Form</title>
 </head>
 <body>
    <div class="elf-order-form">
         <h1>Simple Order Form</h1>
         <p class="subtitle">Please fill out the form below to place your order.</p>
 
-        <form id="orderForm">
-            <label class="form-label">Product</label>
-            <select class="input-field" id="product" required>
-                <option value="" disabled selected>Select a product you want to order</option>
+        <form id="orderForm" novalidate> <label class="form-label">Product</label>
+            <select class="input-field" id="product">
+                <option value="">Select a product you want to order</option>
                 <option value="product1">Product 1</option>
                 <option value="product2">Product 2</option>
                 <option value="product3">Product 3</option>
             </select>
-            <input type="number" class="input-field" id="quantity" placeholder="Quantity" min="1" required>
-            <input type="date" class="input-field" id="deliveryDate" required>
+            
+            <input type="number" class="input-field" id="quantity" placeholder="Quantity" min="1">
+            <input type="date" class="input-field" id="deliveryDate">
+            
             <label class="form-label">Delivery Time</label>
             <div class="checkbox-grid">
                 <label class="checkbox-item">
@@ -36,18 +37,18 @@
                     <input type="checkbox" name="deliveryTime" value="3:00 PM - 5:00 PM"> 3:00 PM - 5:00 PM
                 </label>
             </div>
-            <label class="form-label"></label> 
-            <input type="text" class="input-field" id="customerName" placeholder="Name" required>
+            
+            <input type="text" class="input-field" id="customerName" placeholder="Name">
 
             <div class="form-row">
-                <input type="email" class="input-field" id="customerEmail" placeholder="Email" required>
-                <input type="tel" class="input-field" id="customerPhone" placeholder="Phone" required>
+                <input type="email" class="input-field" id="customerEmail" placeholder="Email">
+                <input type="tel" class="input-field" id="customerPhone" placeholder="Phone">
             </div>
 
             <textarea class="input-field" id="comments" rows="4" placeholder="Additional Comments" style="resize: vertical;"></textarea>
 
             <label class="terms-container">
-                <input type="checkbox" id="terms" required> I accept the terms and conditions.
+                <input type="checkbox" id="terms"> I accept the terms and conditions.
             </label>
 
             <div class="btn-container">
@@ -56,6 +57,5 @@
         </form>
     </div>
     <script src="task.js"></script>
-    
 </body>
 </html>
